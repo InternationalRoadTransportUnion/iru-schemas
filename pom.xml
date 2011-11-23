@@ -89,6 +89,11 @@
 									<type>xsd</type>
 									<classifier>tir-actor</classifier>
 								</artifact>
+								<artifact>
+									<file>src/main/resources/tir-carnet-1.xsd</file>
+									<type>xsd</type>
+									<classifier>tir-carnet</classifier>
+								</artifact>
 							</artifacts>
 						</configuration>
 					</execution>

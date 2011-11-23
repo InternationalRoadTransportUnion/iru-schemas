@@ -11,14 +11,12 @@
 		<xs:complexType/>
 	</xs:element>
 
-
 	<xs:element name="Association">
 		<xs:complexType>
-			<xs:attribute name="id" type="xs:nonNegativeInteger" use="required"/>
+			<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
 			<xs:attribute name="name" type="xs:string" use="optional"/>
 		</xs:complexType>
 	</xs:element>
-
 
 	<xs:simpleType name="HaulierIdType">
 		<xs:restriction base="xs:string">
