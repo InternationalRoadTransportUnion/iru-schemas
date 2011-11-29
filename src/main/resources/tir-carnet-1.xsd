@@ -17,4 +17,13 @@
 		</xs:restriction>
 	</xs:simpleType>
 
+	<xs:simpleType name="VoletCountType">
+ 		<xs:restriction base="xs:unsignedByte">
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="6"/>
+			<xs:enumeration value="14"/>
+			<xs:enumeration value="20"/>
+ 		</xs:restriction>
+	</xs:simpleType>
+
 </xs:schema>
