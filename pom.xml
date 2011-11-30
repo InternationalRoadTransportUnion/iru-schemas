@@ -9,6 +9,21 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.iru.maven.plugins</groupId>
+				<artifactId>maven-jaxbgenser-plugin</artifactId>
+				<version>1.0.0</version>
+				<configuration>
+					<globalBindings>globalBindings.xjb</globalBindings>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate-xjb</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
 				<artifactId>maven-jaxb2-plugin</artifactId>
 				<version>0.8.0</version>
@@ -19,6 +34,13 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<args>
+						<arg>-extension</arg>
+					</args>
+					<bindingDirectory>${basedir}/target/xjb</bindingDirectory>
+				</configuration>
+
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
