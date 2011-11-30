@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+	targetNamespace="http://www.iru.org/model/iso-4217"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iru.org/model/iso-4217">
+
+	<xs:simpleType name="CurrencyCodeType">
+		<xs:restriction base="xs:string">				
+			<!-- No enumeration restriction is made here to take into account
+				not only current, but also old and new currency codes -->
+			<xs:pattern value="[A-Z]{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="CurrencyNumType">
+		<xs:restriction base="xs:unsignedShort">				
+			<!-- No restriction is made here to take into account
+				not only current, but also old and new currency numeric codes -->
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="CurrencyType">
+		<xs:simpleContent>
+			<xs:extension base="CurrencyCodeType">
+				<xs:attribute name="num" type="CurrencyNumType" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:element name="Currency" type="CurrencyType"/>
+
+</xs:schema>
+
