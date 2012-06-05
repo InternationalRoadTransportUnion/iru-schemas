@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+	targetNamespace="http://www.iru.org/model/iso-639-1"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iru.org/model/iso-639-1">
+
+	<xs:simpleType name="LanguageCodeType">
+		<xs:restriction base="xs:string">
+			<!-- No enumeration restriction is made here to take into account
+				not only current, but also old and new language codes -->
+			<xs:pattern value="[a-z]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>
+
