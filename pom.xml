@@ -107,6 +107,16 @@
 									<classifier>iso-3166-1-alpha-3</classifier>
 								</artifact>
 								<artifact>
+									<file>src/main/resources/iso-639-1.xsd</file>
+									<type>xsd</type>
+									<classifier>iso-639-1</classifier>
+								</artifact>
+								<artifact>
+									<file>src/main/resources/iso-4217.xsd</file>
+									<type>xsd</type>
+									<classifier>iso-4217</classifier>
+								</artifact>
+								<artifact>
 									<file>src/main/resources/tir-actor-1.xsd</file>
 									<type>xsd</type>
 									<classifier>tir-actor</classifier>
