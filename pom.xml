@@ -102,6 +102,11 @@
 						<configuration>
 							<artifacts>
 								<artifact>
+									<file>src/main/resources/ietf-rfc-2278.xsd</file>
+									<type>xsd</type>
+									<classifier>ietf-rfc-2278</classifier>
+								</artifact>
+								<artifact>
 									<file>src/main/resources/iso-3166-1-alpha-3.xsd</file>
 									<type>xsd</type>
 									<classifier>iso-3166-1-alpha-3</classifier>

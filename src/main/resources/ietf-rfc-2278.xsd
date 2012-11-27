@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+	targetNamespace="http://www.ietf.org/rfc/rfc2278"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ietf.org/rfc/rfc2278">
+
+	<xs:simpleType name="IANACharsetType">
+		<!--
+
+   3.3.  Naming Requirements
+
+   One or more names MUST be assigned to all registered charsets.
+   Multiple names for the same charset are permitted, but if multiple
+   names are assigned a single primary name for the charset MUST be
+   identified. All other names are considered to be aliases for the
+   primary name and use of the primary name is preferred over use of any
+   of the aliases.
+
+   Each assigned name MUST uniquely identify a single charset.  All
+   charset names MUST be suitable for use as the value of a MIME content
+   type charset parameter and hence MUST conform to MIME parameter value
+   syntax. This applies even if the specific charset being registered is
+   not suitable for use with the "text" media type.
+
+   Finally, charsets being registered for use with the "text" media type
+   MUST have a primary name that conforms to the more restrictive syntax
+   of the charset field in MIME encoded-words [RFC-2047, RFC-2184] and
+   MIME extended parameter values [RFC-2184]. A combined ABNF definition
+   for such names is as follows:
+
+   mime-charset = 1*<Any CHAR except SPACE, CTLs, and cspecials>
+
+   cspecials    = "(" / ")" / "<" / ">" / "@" / "," / ";" / ":" / "
+                  <"> / "/" / "[" / "]" / "?" / "." / "=" / "*"
+
+   CHAR         =  <any ASCII character>        ; (  0-177,  0.-127.)
+   SPACE        =  <ASCII SP, space>            ; (     40,      32.)
+   CTL          =  <any ASCII control           ; (  0- 37,  0.- 31.)
+                    character and DEL>          ; (    177,     127.)
+ -->
+	
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+
+</xs:schema>
+
