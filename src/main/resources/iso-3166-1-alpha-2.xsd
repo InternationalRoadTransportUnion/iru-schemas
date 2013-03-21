@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+	targetNamespace="http://www.iru.org/model/iso-3166-1-alpha-2"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iru.org/model/iso-3166-1-alpha-2">
+
+	<xs:simpleType name="CountryCodeType">
+		<xs:restriction base="xs:string">
+			<!-- No enumeration restriction is made here to take into account
+				not only current, but also old and new country codes -->
+			<xs:pattern value="[A-Z]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!--  http://www.unece.org/tir/system/tir-system-countries.html -->
+	<xs:simpleType name="ContractingPartyCountryCodeType">
+		<xs:restriction base="CountryCodeType">
+			<xs:enumeration value="AF" />
+			<xs:enumeration value="AL" />
+			<xs:enumeration value="DZ" />
+			<xs:enumeration value="AM" />
+			<xs:enumeration value="AT" />
+			<xs:enumeration value="AZ" />
+			<xs:enumeration value="BY" />
+			<xs:enumeration value="BE" />
+			<xs:enumeration value="BA" />
+			<xs:enumeration value="BG" />
+			<xs:enumeration value="CA" />
+			<xs:enumeration value="CL" />
+			<xs:enumeration value="HR" />
+			<xs:enumeration value="CY" />
+			<xs:enumeration value="CZ" />
+			<xs:enumeration value="DK" />
+			<xs:enumeration value="EE" />
+			<xs:enumeration value="FI" />
+			<xs:enumeration value="FR" />
+			<xs:enumeration value="GE" />
+			<xs:enumeration value="DE" />
+			<xs:enumeration value="GR" />
+			<xs:enumeration value="HU" />
+			<xs:enumeration value="ID" />
+			<xs:enumeration value="IR" />
+			<xs:enumeration value="IE" />
+			<xs:enumeration value="IL" />
+			<xs:enumeration value="IT" />
+			<xs:enumeration value="JO" />
+			<xs:enumeration value="KZ" />
+			<xs:enumeration value="KW" />
+			<xs:enumeration value="KG" />
+			<xs:enumeration value="LV" />
+			<xs:enumeration value="LB" />
+			<xs:enumeration value="LR" />
+			<xs:enumeration value="LT" />
+			<xs:enumeration value="LU" />
+			<xs:enumeration value="MT" />
+			<xs:enumeration value="MD" />
+			<xs:enumeration value="MN" />
+			<xs:enumeration value="ME" />
+			<xs:enumeration value="MA" />
+			<xs:enumeration value="NL" />
+			<xs:enumeration value="NO" />
+			<xs:enumeration value="PL" />
+			<xs:enumeration value="PT" />
+			<xs:enumeration value="KR" />
+			<xs:enumeration value="RO" />
+			<xs:enumeration value="RU" />
+			<xs:enumeration value="RS" />
+			<xs:enumeration value="SK" />
+			<xs:enumeration value="SI" />
+			<xs:enumeration value="ES" />
+			<xs:enumeration value="SE" />
+			<xs:enumeration value="CH" />
+			<xs:enumeration value="SY" />
+			<xs:enumeration value="TJ" />
+			<xs:enumeration value="MK" />
+			<xs:enumeration value="TN" />
+			<xs:enumeration value="TR" />
+			<xs:enumeration value="TM" />
+			<xs:enumeration value="UA" />
+			<xs:enumeration value="AE" />
+			<xs:enumeration value="GB" />
+			<xs:enumeration value="US" />
+			<xs:enumeration value="UY" />
+			<xs:enumeration value="UZ" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="TIROperationalCountryCodeType">
+		<xs:restriction base="ContractingPartyCountryCodeType">
+			<xs:enumeration value="AL" />
+			<xs:enumeration value="AM" />
+			<xs:enumeration value="AT" />
+			<xs:enumeration value="AZ" />
+			<xs:enumeration value="BY" />
+			<xs:enumeration value="BE" />
+			<xs:enumeration value="BA" />
+			<xs:enumeration value="BG" />
+			<xs:enumeration value="HR" />
+			<xs:enumeration value="CY" />
+			<xs:enumeration value="CZ" />
+			<xs:enumeration value="DK" />
+			<xs:enumeration value="EE" />
+			<xs:enumeration value="FI" />
+			<xs:enumeration value="FR" />
+			<xs:enumeration value="GE" />
+			<xs:enumeration value="DE" />
+			<xs:enumeration value="GR" />
+			<xs:enumeration value="HU" />
+			<xs:enumeration value="IR" />
+			<xs:enumeration value="IE" />
+			<xs:enumeration value="IL" />
+			<xs:enumeration value="IT" />
+			<xs:enumeration value="JO" />
+			<xs:enumeration value="KZ" />
+			<xs:enumeration value="KW" />
+			<xs:enumeration value="KG" />
+			<xs:enumeration value="LV" />
+			<xs:enumeration value="LB" />
+			<xs:enumeration value="LT" />
+			<xs:enumeration value="LU" />
+			<xs:enumeration value="MT" />
+			<xs:enumeration value="MD" />
+			<xs:enumeration value="MN" />
+			<xs:enumeration value="ME" />
+			<xs:enumeration value="MA" />
+			<xs:enumeration value="NL" />
+			<xs:enumeration value="NO" />
+			<xs:enumeration value="PL" />
+			<xs:enumeration value="PT" />
+			<xs:enumeration value="RO" />
+			<xs:enumeration value="RU" />
+			<xs:enumeration value="RS" />
+			<xs:enumeration value="SK" />
+			<xs:enumeration value="SI" />
+			<xs:enumeration value="ES" />
+			<xs:enumeration value="SE" />
+			<xs:enumeration value="CH" />
+			<xs:enumeration value="SY" />
+			<xs:enumeration value="TJ" />
+			<xs:enumeration value="MK" />
+			<xs:enumeration value="TN" />
+			<xs:enumeration value="TR" />
+			<xs:enumeration value="TM" />
+			<xs:enumeration value="UA" />
+			<xs:enumeration value="GB" />
+			<xs:enumeration value="UZ" />
+		</xs:restriction>
+	</xs:simpleType>
+
+
+
+</xs:schema>
+
