@@ -86,6 +86,7 @@
 
 	<xs:simpleType name="TIROperationalCountryCodeType">
 		<xs:restriction base="ContractingPartyCountryCodeType">
+			<xs:enumeration value="AF" />
 			<xs:enumeration value="AL" />
 			<xs:enumeration value="AM" />
 			<xs:enumeration value="AT" />
