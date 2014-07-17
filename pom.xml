@@ -127,9 +127,19 @@
 									<classifier>tir-actor</classifier>
 								</artifact>
 								<artifact>
+									<file>src/main/resources/guarantee-1.xsd</file>
+									<type>xsd</type>
+									<classifier>guarantee</classifier>
+								</artifact>
+								<artifact>
 									<file>src/main/resources/tir-carnet-1.xsd</file>
 									<type>xsd</type>
 									<classifier>tir-carnet</classifier>
+								</artifact>
+								<artifact>
+									<file>src/main/resources/tir-eguarantee-1.xsd</file>
+									<type>xsd</type>
+									<classifier>tir-eguarantee</classifier>
 								</artifact>
 							</artifacts>
 						</configuration>
