@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema elementFormDefault="qualified"
 	targetNamespace="http://www.iru.org/model/tir-eguarantee-1"
-	xmlns="http://www.iru.org/model/tir-eguarantee-1" 
+	xmlns="http://www.iru.org/model/tir-eguarantee-1"
+	xmlns:g="http://www.iru.org/model/guarantee-1"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-	<xs:import namespace="http://www.iru.org/model/guarantee-1" schemaLocation="guarantee-1.xsd"/>
+	<xs:import namespace="http://www.iru.org/model/guarantee-1" schemaLocation="iru-guarantee-1.xsd"/>
 
 	<xs:simpleType name="EGuaranteeNumberType">
-		<xs:restriction base="xs:token"/>
+		<xs:restriction base="g:GuaranteeNumberType"/>
 	</xs:simpleType>
 
 </xs:schema>
