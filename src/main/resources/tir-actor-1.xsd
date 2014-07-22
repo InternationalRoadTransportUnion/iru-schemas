@@ -32,6 +32,13 @@
 	<xs:element name="Haulier" type="HaulierType"/>
 	<xs:element name="Holder" type="HaulierType"/>
 
+	<xs:complexType name="GuaranteeChainPartyType">
+		<xs:choice>
+			<xs:element ref="IRU"/>
+			<xs:element ref="Association"/>
+			<xs:element ref="Haulier"/>
+		</xs:choice>
+	</xs:complexType>
 	
 	<xs:element name="Customs">
 		<xs:complexType>
