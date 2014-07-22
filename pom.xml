@@ -127,7 +127,7 @@
 									<classifier>tir-actor</classifier>
 								</artifact>
 								<artifact>
-									<file>src/main/resources/guarantee-1.xsd</file>
+									<file>src/main/resources/iru-guarantee-1.xsd</file>
 									<type>xsd</type>
 									<classifier>guarantee</classifier>
 								</artifact>
