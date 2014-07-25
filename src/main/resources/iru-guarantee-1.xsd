@@ -61,6 +61,17 @@
 		</xs:restriction>
 	</xs:simpleType>
 
+	<xs:simpleType name="GuaranteeValidityPeriodType">
+		<xs:restriction base="xs:anyURI"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="GuaranteeValidityPeriodTypeType">
+		<xs:restriction base="GuaranteeValidityPeriodType">
+			<xs:enumeration value="http://www.iru.org/model/guarantee-1/validity-period?duration="/>
+			<xs:enumeration value="http://www.iru.org/model/guarantee-1/validity-period?final-date="/>
+		</xs:restriction>
+	</xs:simpleType>
+
 	<xs:simpleType name="ItemPropertyCodeType">
 		<xs:restriction base="xs:anyURI"/>
 	</xs:simpleType>
@@ -70,6 +81,7 @@
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/legal-framework"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/usage-rule-set"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/format"/>
+			<xs:enumeration value="http://www.iru.org/model/guarantee-1/validity-period"/>
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -253,9 +265,16 @@
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Item Instance. Manufacture Date. Date</ccts:DictionaryEntryName>
                      <ccts:Definition>The date of manufacture of the Item Instance.</ccts:Definition>
+         <xs:element name="ValidityFinalDate" type="xs:date" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Item Instance. Validity Final Date. Date</ccts:DictionaryEntryName>
+                     <ccts:Definition>If the Item is a TIR guarantee, the final day of validity of the guarantee according to the article 9 of the TIR Convention.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Item Instance</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Manufacture Date</ccts:PropertyTerm>
+                     <ccts:PropertyTerm>Validity Final Date</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
                      <ccts:DataType>Date. Type</ccts:DataType>
                   </ccts:Component>
