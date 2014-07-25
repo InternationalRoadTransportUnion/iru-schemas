@@ -72,16 +72,30 @@
 		</xs:restriction>
 	</xs:simpleType>
 
+	<xs:simpleType name="GuaranteeMonetaryLimitType">
+		<xs:restriction base="xs:anyURI"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="GuaranteeMonetaryLimitTypeType">
+		<xs:restriction base="GuaranteeMonetaryLimitType">
+			<xs:enumeration value="http://www.iru.org/model/guarantee-1/monetary-limit?value=&amp;currency="/>
+		</xs:restriction>
+	</xs:simpleType>
+
+
 	<xs:simpleType name="ItemPropertyCodeType">
 		<xs:restriction base="xs:anyURI"/>
 	</xs:simpleType>
 	
+	
+
 	<xs:simpleType name="ItemPropertyCodeTypeType">
 		<xs:restriction base="ItemPropertyCodeType">
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/legal-framework"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/usage-rule-set"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/format"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/validity-period"/>
+			<xs:enumeration value="http://www.iru.org/model/guarantee-1/monetary-limit"/>
 		</xs:restriction>
 	</xs:simpleType>
 
