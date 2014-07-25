@@ -277,8 +277,17 @@
                <xs:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Item Instance. Manufacture Date. Date</ccts:DictionaryEntryName>
-                     <ccts:Definition>The date of manufacture of the Item Instance.</ccts:Definition>
+                     <ccts:DictionaryEntryName>Item Instance. Manufacture Date Time. Date Time</ccts:DictionaryEntryName>
+                     <ccts:Definition>The date and time of manufacture of the Item Instance.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Item Instance</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Manufacture Date Time</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Date Time</ccts:RepresentationTerm>
+                     <ccts:DataType>Date Time. Type</ccts:DataType>
+                  </ccts:Component>
+               </xs:documentation>
+            </xs:annotation>
+         </xs:element>
          <xs:element name="ValidityFinalDate" type="xs:date" minOccurs="0" maxOccurs="1">
             <xs:annotation>
                <xs:documentation>
