@@ -304,6 +304,22 @@
                </xs:documentation>
             </xs:annotation>
          </xs:element>
+	<xs:element name="AdditionalItemProperty" type="ItemPropertyType" minOccurs="0" maxOccurs="unbounded">
+		<xs:annotation>
+			<xs:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ASBIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Item. Additional_ Item Property. Item	Property</ccts:DictionaryEntryName>
+					<ccts:Definition>Associates the item with a set of additional properties.</ccts:Definition>
+					<ccts:Cardinality>0..n</ccts:Cardinality>
+					<ccts:ObjectClass>Item</ccts:ObjectClass>
+					<ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
+					<ccts:PropertyTerm>Item Property</ccts:PropertyTerm>
+					<ccts:AssociatedObjectClass>Item Property</ccts:AssociatedObjectClass>
+				</ccts:Component>
+			</xs:documentation>
+		</xs:annotation>
+	</xs:element>
       </xs:sequence>
   </xs:complexType>
 
