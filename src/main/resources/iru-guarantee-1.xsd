@@ -288,22 +288,6 @@
                </xs:documentation>
             </xs:annotation>
          </xs:element>
-         <xs:element name="ValidityFinalDate" type="xs:date" minOccurs="0" maxOccurs="1">
-            <xs:annotation>
-               <xs:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Item Instance. Validity Final Date. Date</ccts:DictionaryEntryName>
-                     <ccts:Definition>If the Item is a TIR guarantee, the final day of validity of the guarantee according to the article 9 of the TIR Convention.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Item Instance</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Validity Final Date</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
-                     <ccts:DataType>Date. Type</ccts:DataType>
-                  </ccts:Component>
-               </xs:documentation>
-            </xs:annotation>
-         </xs:element>
 	<xs:element name="AdditionalItemProperty" type="ItemPropertyType" minOccurs="0" maxOccurs="unbounded">
 		<xs:annotation>
 			<xs:documentation>
