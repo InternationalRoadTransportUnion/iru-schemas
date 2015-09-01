@@ -18,7 +18,7 @@
 	<xs:simpleType name="LegalFrameworkTypeType">
 		<xs:restriction base="LegalFrameworkType">
 			<xs:enumeration value="http://www.unece.org/tir/tirconv/conv75.html"/>
-			<xs:enumeration value="http://www.iru.org/en_transit_internal_carnet"/>
+			<xs:enumeration value="http://www.iru.org/trade-facilitation/icarnet"/>
 		</xs:restriction>
 	</xs:simpleType>
 
