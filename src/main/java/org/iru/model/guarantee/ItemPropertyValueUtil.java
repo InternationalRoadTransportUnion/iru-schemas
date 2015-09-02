@@ -6,6 +6,9 @@ import java.util.Map;
 
 public class ItemPropertyValueUtil {
 
+	public static final String MONETARY_LIMIT_CURRENCY = "currency";
+	public static final String MONETARY_LIMIT_VALUE = "value";
+
 	private String substring(String value, ItemPropertyCodeType code, char separator) {
 		if (value.startsWith(code.value() + separator)) {
 			return value.substring(code.value().length() + 1);
@@ -84,4 +87,14 @@ public class ItemPropertyValueUtil {
 		return withQueryParameter(name, value, ItemPropertyCodeType.VALIDITY_PERIOD);
 	}
 	
+	public Map<String,String> monetaryLimitParameters(String value) {
+		return queryParameters(value, ItemPropertyCodeType.MONETARY_LIMIT);
+	}
+	
+	public String withMonetaryLimitParameters(String currency, int amount) {
+		Map<String,String> p = new LinkedHashMap<String, String>();
+		p.put(MONETARY_LIMIT_VALUE, Integer.toString(amount));
+		p.put(MONETARY_LIMIT_CURRENCY, currency);
+		return withQueryParameters(p, ItemPropertyCodeType.MONETARY_LIMIT);
+	}
 }

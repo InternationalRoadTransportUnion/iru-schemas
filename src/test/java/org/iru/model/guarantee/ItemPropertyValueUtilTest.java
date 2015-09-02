@@ -17,7 +17,12 @@ public class ItemPropertyValueUtilTest {
 	private static final String SIXTY_DAYS = "P60D";
 	private static final String HTTP_WWW_IRU_ORG_MODEL_GUARANTEE_1_VALIDITY_PERIOD_DURATION_P60D = "http://www.iru.org/model/guarantee-1/validity-period?duration=P60D";
 	
+	private static final String CURRENCY = ItemPropertyValueUtil.MONETARY_LIMIT_CURRENCY;
+	private static final String EURO = "EUR";
+	private static final String VALUE = ItemPropertyValueUtil.MONETARY_LIMIT_VALUE;
+	private static final int SIXTY_THOUSAND = 60000;
 	
+	private static final String HTTP_WWW_IRU_ORG_MODEL_GUARANTEE_1_MONETARY_LIMIT_VALUE_60000_CURRENCY_EUR = "http://www.iru.org/model/guarantee-1/monetary-limit?value=60000&currency=EUR";
 	
 	public ItemPropertyValueUtil util = new ItemPropertyValueUtil();
 	
@@ -63,5 +68,19 @@ public class ItemPropertyValueUtilTest {
 		Assert.assertEquals(HTTP_WWW_IRU_ORG_MODEL_GUARANTEE_1_VALIDITY_PERIOD_DURATION_P60D, validityPeriod);
 	}
 	
-	
+	@Test
+	public void monetaryLimitSixtyThousandEurosTest() {
+		String monetaryLimit = HTTP_WWW_IRU_ORG_MODEL_GUARANTEE_1_MONETARY_LIMIT_VALUE_60000_CURRENCY_EUR;
+		Map<String,String> monetaryLimitParams = util.monetaryLimitParameters(monetaryLimit);
+		Assert.assertEquals(2, monetaryLimitParams.size());
+		Assert.assertEquals(EURO, monetaryLimitParams.get(CURRENCY));
+		Assert.assertEquals(SIXTY_THOUSAND, Integer.parseInt(monetaryLimitParams.get(VALUE)));
+	}
+
+	@Test
+	public void withMonetaryLimitSixtyThousandEurosTest() {
+		String  monetaryLimit = util.withMonetaryLimitParameters(EURO, SIXTY_THOUSAND);
+		Assert.assertEquals(HTTP_WWW_IRU_ORG_MODEL_GUARANTEE_1_MONETARY_LIMIT_VALUE_60000_CURRENCY_EUR, monetaryLimit);
+	}
+
 }

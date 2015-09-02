@@ -8,7 +8,8 @@ public enum ItemPropertyCodeType {
 	LEGAL_FRAMEWORK("http://www.iru.org/model/guarantee-1/legal-framework"),
 	USAGE_RULESET("http://www.iru.org/model/guarantee-1/usage-rule-set"),
 	FORMAT("http://www.iru.org/model/guarantee-1/format"),
-	VALIDITY_PERIOD("http://www.iru.org/model/guarantee-1/validity-period");
+	VALIDITY_PERIOD("http://www.iru.org/model/guarantee-1/validity-period"),
+	MONETARY_LIMIT("http://www.iru.org/model/guarantee-1/monetary-limit");
 	
 	private URI uri;
 	
