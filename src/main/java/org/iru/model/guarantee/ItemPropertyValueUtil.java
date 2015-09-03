@@ -5,7 +5,13 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ItemPropertyValueUtil {
+	
+	public static final String FORMAT_PAPER = "paper";
+	public static final String FORMAT_ELECTRONIC = "electronic";
 
+	public static final String VALIDITY_PERIOD_DURATION = "duration";
+	public static final String VALIDITY_PERIOD_FINAL_DATE = "final-date";
+	
 	public static final String MONETARY_LIMIT_CURRENCY = "currency";
 	public static final String MONETARY_LIMIT_VALUE = "value";
 
@@ -79,6 +85,14 @@ public class ItemPropertyValueUtil {
 		return withAnchorValue(value, ItemPropertyCodeType.FORMAT);
 	}
 	
+	public String withFormatPaperValue() {
+		return withFormatValue(FORMAT_PAPER);
+	}
+	
+	public String withFormatElectronicValue() {
+		return withFormatValue(FORMAT_ELECTRONIC);
+	}
+	
 	public Map.Entry<String, String> validityPeriodParameter(String value) {
 		return queryParameters(value, ItemPropertyCodeType.VALIDITY_PERIOD).entrySet().iterator().next();
 	}
@@ -86,7 +100,15 @@ public class ItemPropertyValueUtil {
 	public String withValidityPeriodParameter(String name, String value) {
 		return withQueryParameter(name, value, ItemPropertyCodeType.VALIDITY_PERIOD);
 	}
+
+	public String withValidityPeriodDurationParameter(String value) {
+		return withValidityPeriodParameter(VALIDITY_PERIOD_DURATION, value);
+	}
 	
+	public String withValidityPeriodFinalDateParameter(String value) {
+		return withValidityPeriodParameter(VALIDITY_PERIOD_FINAL_DATE, value);
+	}
+
 	public Map<String,String> monetaryLimitParameters(String value) {
 		return queryParameters(value, ItemPropertyCodeType.MONETARY_LIMIT);
 	}

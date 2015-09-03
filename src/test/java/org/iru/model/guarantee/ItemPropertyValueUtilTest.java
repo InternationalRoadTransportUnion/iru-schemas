@@ -10,10 +10,8 @@ public class ItemPropertyValueUtilTest {
 	private static final String FOUR = "4";
 	private static final String HTTP_WWW_IRU_ORG_MODEL_GUARANTEE_1_USAGE_RULE_SET_4 = "http://www.iru.org/model/guarantee-1/usage-rule-set#4";
 
-	private static final String PAPER = "paper";
 	private static final String HTTP_WWW_IRU_ORG_MODEL_GUARANTEE_1_FORMAT_PAPER = "http://www.iru.org/model/guarantee-1/format#paper";
 
-	private static final String DURATION = "duration";
 	private static final String SIXTY_DAYS = "P60D";
 	private static final String HTTP_WWW_IRU_ORG_MODEL_GUARANTEE_1_VALIDITY_PERIOD_DURATION_P60D = "http://www.iru.org/model/guarantee-1/validity-period?duration=P60D";
 	
@@ -44,13 +42,12 @@ public class ItemPropertyValueUtilTest {
 	public void formatValuePaperTest() {
 		String paperFormat = HTTP_WWW_IRU_ORG_MODEL_GUARANTEE_1_FORMAT_PAPER;
 		String paper = util.formatValue(paperFormat);
-		Assert.assertEquals(PAPER, paper);
+		Assert.assertEquals(ItemPropertyValueUtil.FORMAT_PAPER, paper);
 	}
 	
 	@Test
 	public void withFormatValuePaperTest() {
-		String paper = PAPER;
-		String paperFormat = util.withFormatValue(paper);
+		String paperFormat = util.withFormatPaperValue();
 		Assert.assertEquals(HTTP_WWW_IRU_ORG_MODEL_GUARANTEE_1_FORMAT_PAPER, paperFormat);
 	}
 	
@@ -58,13 +55,13 @@ public class ItemPropertyValueUtilTest {
 	public void validityPeriodDurationSixtyDaysTest() {
 		String validityPeriod = HTTP_WWW_IRU_ORG_MODEL_GUARANTEE_1_VALIDITY_PERIOD_DURATION_P60D;
 		Map.Entry<String,String> validityPeriodParam = util.validityPeriodParameter(validityPeriod);
-		Assert.assertEquals(DURATION, validityPeriodParam.getKey());
+		Assert.assertEquals(ItemPropertyValueUtil.VALIDITY_PERIOD_DURATION, validityPeriodParam.getKey());
 		Assert.assertEquals(SIXTY_DAYS, validityPeriodParam.getValue());
 	}
 	
 	@Test
 	public void withValidityPeriodDurationSixtyDaysTest() {
-		String validityPeriod = util.withValidityPeriodParameter(DURATION, SIXTY_DAYS);
+		String validityPeriod = util.withValidityPeriodDurationParameter(SIXTY_DAYS);
 		Assert.assertEquals(HTTP_WWW_IRU_ORG_MODEL_GUARANTEE_1_VALIDITY_PERIOD_DURATION_P60D, validityPeriod);
 	}
 	
