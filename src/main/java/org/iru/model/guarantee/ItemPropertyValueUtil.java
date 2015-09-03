@@ -5,9 +5,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ItemPropertyValueUtil {
-	
-	public static final String FORMAT_PAPER = "paper";
-	public static final String FORMAT_ELECTRONIC = "electronic";
 
 	public static final String VALIDITY_PERIOD_DURATION = "duration";
 	public static final String VALIDITY_PERIOD_FINAL_DATE = "final-date";
@@ -85,12 +82,16 @@ public class ItemPropertyValueUtil {
 		return withAnchorValue(value, ItemPropertyCodeType.FORMAT);
 	}
 	
-	public String withFormatPaperValue() {
-		return withFormatValue(FORMAT_PAPER);
+	public String withFormatValue(FormatTypeAnchor value) {
+		return withFormatValue(value.value());
 	}
-	
+
+	public String withFormatPaperValue() {
+		return withFormatValue(FormatTypeAnchor.PAPER);
+	}
+
 	public String withFormatElectronicValue() {
-		return withFormatValue(FORMAT_ELECTRONIC);
+		return withFormatValue(FormatTypeAnchor.ELECTRONIC);
 	}
 	
 	public Map.Entry<String, String> validityPeriodParameter(String value) {

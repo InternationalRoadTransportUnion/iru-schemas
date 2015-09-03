@@ -42,7 +42,7 @@ public class ItemPropertyValueUtilTest {
 	public void formatValuePaperTest() {
 		String paperFormat = HTTP_WWW_IRU_ORG_MODEL_GUARANTEE_1_FORMAT_PAPER;
 		String paper = util.formatValue(paperFormat);
-		Assert.assertEquals(ItemPropertyValueUtil.FORMAT_PAPER, paper);
+		Assert.assertEquals(FormatTypeAnchor.PAPER.value(), paper);
 	}
 	
 	@Test
