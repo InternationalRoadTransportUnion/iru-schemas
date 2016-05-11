@@ -120,7 +120,7 @@
 						<ccts:Component>
 							<ccts:ComponentType>ASBIE</ccts:ComponentType>
 							<ccts:DictionaryEntryName>Item. Sellers_ Item Identification. Item Identification</ccts:DictionaryEntryName>
-							<ccts:Definition>Associates the item with its identification according to the IRU system.</ccts:Definition>
+							<ccts:Definition>Associates the item with its identification according to the IRU accounting system.</ccts:Definition>
 							<ccts:Cardinality>0..1</ccts:Cardinality>
 							<ccts:ObjectClass>Item</ccts:ObjectClass>
 							<ccts:PropertyTermQualifier>Sellers</ccts:PropertyTermQualifier>
