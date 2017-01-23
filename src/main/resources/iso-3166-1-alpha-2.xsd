@@ -26,6 +26,7 @@
 			<xs:enumeration value="BG" />
 			<xs:enumeration value="CA" />
 			<xs:enumeration value="CL" />
+			<xs:enumeration value="CN" />
 			<xs:enumeration value="HR" />
 			<xs:enumeration value="CY" />
 			<xs:enumeration value="CZ" />
@@ -58,6 +59,7 @@
 			<xs:enumeration value="MA" />
 			<xs:enumeration value="NL" />
 			<xs:enumeration value="NO" />
+			<xs:enumeration value="PK" />
 			<xs:enumeration value="PL" />
 			<xs:enumeration value="PT" />
 			<xs:enumeration value="KR" />

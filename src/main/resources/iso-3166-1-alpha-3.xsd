@@ -26,6 +26,7 @@
 			<xs:enumeration value="BGR" />
 			<xs:enumeration value="CAN" />
 			<xs:enumeration value="CHL" />
+			<xs:enumeration value="CHN" />
 			<xs:enumeration value="HRV" />
 			<xs:enumeration value="CYP" />
 			<xs:enumeration value="CZE" />
@@ -58,6 +59,7 @@
 			<xs:enumeration value="MAR" />
 			<xs:enumeration value="NLD" />
 			<xs:enumeration value="NOR" />
+			<xs:enumeration value="PAK" />
 			<xs:enumeration value="POL" />
 			<xs:enumeration value="PRT" />
 			<xs:enumeration value="KOR" />
