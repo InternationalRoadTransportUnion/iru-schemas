@@ -6,6 +6,26 @@
 	<artifactId>iru-schemas</artifactId>
 	<version>1.15-SNAPSHOT</version>
 
+	<name>iru-schemas</name>
+	<description>Base schemas and utilities</description>
+	<url>https://github.com/InternationalRoadTransportUnion/iru-schemas</url>
+	<licenses>
+		<license>
+			<name>The Open Software License 3.0 (OSL-3.0)</name>
+			<url>https://opensource.org/licenses/OSL-3.0</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<scm>
+		<connection>scm:git:https://github.com/InternationalRoadTransportUnion/iru-schemas.git</connection>
+		<url>https://github.com/InternationalRoadTransportUnion/iru-schemas</url>
+	</scm>
+	<developers>
+		<developer>
+			<email>Matthieu.Verbert@iru.org</email>
+		</developer>
+	</developers>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
