@@ -19,8 +19,8 @@
 		<plugins>
 			<plugin>
 				<groupId>org.iru.maven.plugins</groupId>
-				<artifactId>maven-jaxbgenser-plugin</artifactId>
-				<version>1.0.1</version>
+				<artifactId>jaxbgenser-maven-plugin</artifactId>
+				<version>1.0.4</version>
 				<configuration>
 					<globalBindings>globalBindings.xjb</globalBindings>
 				</configuration>
