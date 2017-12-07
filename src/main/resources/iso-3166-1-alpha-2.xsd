@@ -38,6 +38,7 @@
 			<xs:enumeration value="DE" />
 			<xs:enumeration value="GR" />
 			<xs:enumeration value="HU" />
+			<xs:enumeration value="IN" />
 			<xs:enumeration value="ID" />
 			<xs:enumeration value="IR" />
 			<xs:enumeration value="IE" />

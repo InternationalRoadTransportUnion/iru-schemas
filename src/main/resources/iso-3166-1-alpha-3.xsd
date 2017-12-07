@@ -38,6 +38,7 @@
 			<xs:enumeration value="DEU" />
 			<xs:enumeration value="GRC" />
 			<xs:enumeration value="HUN" />
+			<xs:enumeration value="IND" />
 			<xs:enumeration value="IDN" />
 			<xs:enumeration value="IRN" />
 			<xs:enumeration value="IRL" />
