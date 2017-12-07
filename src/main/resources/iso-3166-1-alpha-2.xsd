@@ -144,6 +144,7 @@
 			<xs:enumeration value="TR" />
 			<xs:enumeration value="TM" />
 			<xs:enumeration value="UA" />
+			<xs:enumeration value="AE" />
 			<xs:enumeration value="GB" />
 			<xs:enumeration value="UZ" />
 		</xs:restriction>

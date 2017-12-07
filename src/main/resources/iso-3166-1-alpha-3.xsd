@@ -144,6 +144,7 @@
 			<xs:enumeration value="TUR" />
 			<xs:enumeration value="TKM" />
 			<xs:enumeration value="UKR" />
+			<xs:enumeration value="ARE" />
 			<xs:enumeration value="GBR" />
 			<xs:enumeration value="UZB" />
 		</xs:restriction>
