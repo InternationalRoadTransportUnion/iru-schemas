@@ -61,11 +61,14 @@
 			<xs:enumeration value="NLD" />
 			<xs:enumeration value="NOR" />
 			<xs:enumeration value="PAK" />
+			<xs:enumeration value="PSE" />
 			<xs:enumeration value="POL" />
 			<xs:enumeration value="PRT" />
+			<xs:enumeration value="QAT" />
 			<xs:enumeration value="KOR" />
 			<xs:enumeration value="ROU" />
 			<xs:enumeration value="RUS" />
+			<xs:enumeration value="SAU" />
 			<xs:enumeration value="SRB" />
 			<xs:enumeration value="SVK" />
 			<xs:enumeration value="SVN" />
@@ -98,6 +101,7 @@
 			<xs:enumeration value="BEL" />
 			<xs:enumeration value="BIH" />
 			<xs:enumeration value="BGR" />
+			<xs:enumeration value="CHN" />
 			<xs:enumeration value="HRV" />
 			<xs:enumeration value="CYP" />
 			<xs:enumeration value="CZE" />
@@ -109,6 +113,7 @@
 			<xs:enumeration value="DEU" />
 			<xs:enumeration value="GRC" />
 			<xs:enumeration value="HUN" />
+			<xs:enumeration value="IND" />
 			<xs:enumeration value="IRN" />
 			<xs:enumeration value="IRL" />
 			<xs:enumeration value="ISR" />
@@ -128,8 +133,10 @@
 			<xs:enumeration value="MAR" />
 			<xs:enumeration value="NLD" />
 			<xs:enumeration value="NOR" />
+			<xs:enumeration value="PAK" />
 			<xs:enumeration value="POL" />
 			<xs:enumeration value="PRT" />
+			<xs:enumeration value="QAT" />
 			<xs:enumeration value="ROU" />
 			<xs:enumeration value="RUS" />
 			<xs:enumeration value="SRB" />

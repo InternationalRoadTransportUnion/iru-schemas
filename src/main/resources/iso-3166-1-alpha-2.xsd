@@ -62,10 +62,13 @@
 			<xs:enumeration value="NO" />
 			<xs:enumeration value="PK" />
 			<xs:enumeration value="PL" />
+			<xs:enumeration value="PS" />
 			<xs:enumeration value="PT" />
+			<xs:enumeration value="QA" />
 			<xs:enumeration value="KR" />
 			<xs:enumeration value="RO" />
 			<xs:enumeration value="RU" />
+			<xs:enumeration value="SA" />
 			<xs:enumeration value="RS" />
 			<xs:enumeration value="SK" />
 			<xs:enumeration value="SI" />
@@ -98,6 +101,7 @@
 			<xs:enumeration value="BE" />
 			<xs:enumeration value="BA" />
 			<xs:enumeration value="BG" />
+			<xs:enumeration value="CN" />
 			<xs:enumeration value="HR" />
 			<xs:enumeration value="CY" />
 			<xs:enumeration value="CZ" />
@@ -109,6 +113,7 @@
 			<xs:enumeration value="DE" />
 			<xs:enumeration value="GR" />
 			<xs:enumeration value="HU" />
+			<xs:enumeration value="IN" />
 			<xs:enumeration value="IR" />
 			<xs:enumeration value="IE" />
 			<xs:enumeration value="IL" />
@@ -128,8 +133,10 @@
 			<xs:enumeration value="MA" />
 			<xs:enumeration value="NL" />
 			<xs:enumeration value="NO" />
+			<xs:enumeration value="PK" />
 			<xs:enumeration value="PL" />
 			<xs:enumeration value="PT" />
+			<xs:enumeration value="QA" />
 			<xs:enumeration value="RO" />
 			<xs:enumeration value="RU" />
 			<xs:enumeration value="RS" />

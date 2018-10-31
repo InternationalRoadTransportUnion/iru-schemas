@@ -5,20 +5,19 @@ import org.junit.Test;
 
 public class CountryEnumsTest {
 	
-	private static int TIR_CONTRACTING_PARTIES = 71; //https://www.unece.org/tir/welcome.html
+	private static int TIR_CONTRACTING_PARTIES = 74; //https://www.unece.org/tir/welcome.html
 	private static int TIR_CP_COUNTRIES = TIR_CONTRACTING_PARTIES - 1 ; // EU is not a country
 	
 	private static String[] NON_OPERATIONAL_COUNTRIES = { // https://www.unece.org/tir/system/countries.html
 			"Algeria",
 			"Canada",
 			"Chile",
-			"China",
-			"India",
 			"Indonesia",
 			"Liberia",
-			"Pakistan",
+			"Palestine",
 			"Republic of Korea",
 			"United States of America",
+			"Saudi Arabia",
 			"Uruguay"
 	};
 	
