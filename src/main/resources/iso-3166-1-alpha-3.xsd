@@ -60,6 +60,7 @@
 			<xs:enumeration value="MAR" />
 			<xs:enumeration value="NLD" />
 			<xs:enumeration value="NOR" />
+			<xs:enumeration value="OMN" />
 			<xs:enumeration value="PAK" />
 			<xs:enumeration value="PSE" />
 			<xs:enumeration value="POL" />
