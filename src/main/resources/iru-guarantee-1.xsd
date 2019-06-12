@@ -57,7 +57,6 @@
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/usage-rule-set#6-pilot"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/usage-rule-set#14"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/usage-rule-set#20"/>
-			<!-- <xs:enumeration value="http://www.iru.org/model/guarantee-1/usage-rule-set#∞"/> -->
 		</xs:restriction>
 	</xs:simpleType>
 
