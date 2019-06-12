@@ -4,62 +4,28 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class ItemPropertyValueUtil {
+public class ItemPropertyValueUtil extends AbstractUtil {
 
 	public static final String VALIDITY_PERIOD_DURATION = "duration";
 	public static final String VALIDITY_PERIOD_FINAL_DATE = "final-date";
 
 	public static final String MONETARY_LIMIT_CURRENCY = "currency";
 	public static final String MONETARY_LIMIT_VALUE = "value";
-
-	private String substring(String value, ItemPropertyCodeType code, char separator) {
-		if (value.startsWith(code.value() + separator)) {
-			return value.substring(code.value().length() + 1);
-		}
-		throw new IllegalArgumentException(value);
-	}
-
+	
 	public String anchorValue(String value, ItemPropertyCodeType code) {
-		return substring(value, code, '#');
+		return super.anchorValue(value, code.value());
 	}
 
 	public String withAnchorValue(String anchorValue, ItemPropertyCodeType code) {
-		return code.value() + "#" + anchorValue;
+		return super.withAnchorValue(anchorValue, code.value());
 	}
 
 	public Map<String, String> queryParameters(String value, ItemPropertyCodeType code) {
-		String paramsString = substring(value, code, '?');
-		String[] params = paramsString.split("&");
-		Map<String, String> result = new LinkedHashMap<String, String>();
-		for (String param : params) {
-			int eqIndex = param.indexOf('=');
-			if (eqIndex > -1) {
-				String k = param.substring(0, eqIndex);
-				String v = param.substring(eqIndex + 1);
-				result.put(k, v);
-			} else {
-				result.put(param, null);
-			}
-		}
-
-		return result;
+		return super.queryParameters(value, code.value());
 	}
 
 	public String withQueryParameters(Map<String,String> parameters, ItemPropertyCodeType code) {
-		StringBuilder sb = new StringBuilder(code.value());
-		if (parameters != null && ! parameters.isEmpty()) {
-			boolean first = true;
-
-			for (Map.Entry<String, String> param : parameters.entrySet()) {
-				sb.append(first ? "?" : "&");
-				sb.append(param.getKey());
-				if (param.getValue() != null) {
-					sb.append("=").append(param.getValue());
-				}
-				first = false;
-			}
-		}
-		return sb.toString();
+		return super.withQueryParameters(parameters, code.value());
 	}
 
 	public String withQueryParameter(String name, String value, ItemPropertyCodeType code) {
@@ -74,6 +40,7 @@ public class ItemPropertyValueUtil {
 		return withAnchorValue(value, ItemPropertyCodeType.USAGE_RULESET);
 	}
 
+	
 	public String formatValue(String value) {
 		return anchorValue(value, ItemPropertyCodeType.FORMAT);
 	}
@@ -120,4 +87,7 @@ public class ItemPropertyValueUtil {
 		p.put(MONETARY_LIMIT_CURRENCY, currency);
 		return withQueryParameters(p, ItemPropertyCodeType.MONETARY_LIMIT);
 	}
+	
+	
+	
 }

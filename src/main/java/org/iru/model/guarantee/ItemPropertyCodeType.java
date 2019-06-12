@@ -7,11 +7,18 @@ public enum ItemPropertyCodeType {
 
 	LEGAL_FRAMEWORK("http://www.iru.org/model/guarantee-1/legal-framework"),
 	USAGE_RULESET("http://www.iru.org/model/guarantee-1/usage-rule-set"),
+	USAGE_RULE_VOLET_COUNT(UsageRule.VOLET_COUNT),
+	USAGE_RULE_DEED_OF_ENGAGEMENT(UsageRule.DEED_OF_ENGAGEMENT),
+	USAGE_RULE_CORRIDOR(UsageRule.CORRIDOR),
 	FORMAT("http://www.iru.org/model/guarantee-1/format"),
 	VALIDITY_PERIOD("http://www.iru.org/model/guarantee-1/validity-period"),
 	MONETARY_LIMIT("http://www.iru.org/model/guarantee-1/monetary-limit");
 	
 	private URI uri;
+	
+	private ItemPropertyCodeType(UsageRule usageRule) {
+		this(usageRule.getURI());
+	}
 	
 	private ItemPropertyCodeType(String uri) {
 		try {

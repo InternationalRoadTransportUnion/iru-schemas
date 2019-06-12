@@ -25,6 +25,13 @@
 	<xs:simpleType name="UsageRuleType">
 		<xs:restriction base="xs:anyURI"/>
 	</xs:simpleType>
+
+	<xs:simpleType name="UsageRuleCorridorTypeType">
+		<xs:restriction base="xs:anyURI">
+			<xs:enumeration value="one-way"/>
+		</xs:restriction>
+	</xs:simpleType>
+
 	
 	<xs:simpleType name="UsageRuleTypeType">
 		<xs:restriction base="UsageRuleType">
@@ -33,6 +40,9 @@
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/volet#14"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/volet#20"/>
 			<xs:enumeration value="http://www.iru.org/model/association/deed-of-engagement#pilot-addendum"/>
+			<xs:enumeration value="http://www.iru.org/model/association/deed-of-engagement#tobacco-addendum"/>
+			<xs:enumeration value="http://www.iru.org/model/association/deed-of-engagement#tobaccoalcohol-addendum"/>
+			<xs:enumeration value="http://www.iru.org/model/guarantee-1/corridor?type=&amp;countries="/>
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -88,12 +98,15 @@
 		<xs:restriction base="xs:anyURI"/>
 	</xs:simpleType>
 	
-	
-
 	<xs:simpleType name="ItemPropertyCodeTypeType">
 		<xs:restriction base="ItemPropertyCodeType">
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/legal-framework"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/usage-rule-set"/>
+			<!-- individual rules (from rule-set) -->
+			<xs:enumeration value="http://www.iru.org/model/guarantee-1/volet"/>
+			<xs:enumeration value="http://www.iru.org/model/association/deed-of-engagement"/>
+			<xs:enumeration value="http://www.iru.org/model/guarantee-1/corridor"/>
+			<!-- end of individual rules -->
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/format"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/validity-period"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/monetary-limit"/>
