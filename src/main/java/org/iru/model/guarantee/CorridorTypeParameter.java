@@ -1,7 +1,8 @@
 package org.iru.model.guarantee;
 
 public enum CorridorTypeParameter {
-	ONE_WAY("one-way");
+	ONE_WAY("one-way"),
+	TWO_WAY("two-way");
 
 	private String value;
 

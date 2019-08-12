@@ -29,6 +29,7 @@
 	<xs:simpleType name="UsageRuleCorridorTypeType">
 		<xs:restriction base="xs:anyURI">
 			<xs:enumeration value="one-way"/>
+			<xs:enumeration value="two-way"/>
 		</xs:restriction>
 	</xs:simpleType>
 
