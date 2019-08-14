@@ -1,5 +1,6 @@
 package org.iru.model.guarantee;
 
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -38,6 +39,24 @@ public class UsageRuleValueUtil extends AbstractUtil {
 	
 	public Map<String,String> corridorParameters(String value) {
 		return queryParameters(value, UsageRule.CORRIDOR.getURI());
+	}
+	
+	public CorridorParameters toCorridorParameters(String value) {
+		Map<String,String> qp = queryParameters(value, UsageRule.CORRIDOR.getURI());
+		return toCorridorParameters(qp);
+	}
+
+	public CorridorParameters toCorridorParameters(Map<String, String> queryParameters) {
+		CorridorTypeParameter t = CorridorTypeParameter.fromValue(queryParameters.get(CORRIDOR_TYPE));
+		List<String> c = Arrays.asList(queryParameters.get(CORRIDOR_COUNTRIES).split(","));
+		CorridorParameters cp = new CorridorParameters();
+		cp.setType(t);
+		cp.setCountries(c);
+		return cp;
+	}
+	
+	public String withCorridorParameters(CorridorParameters corridorParameters) {
+		return withCorridorParameters(corridorParameters.getType(), corridorParameters.getCountries());
 	}
 	
 	public String withCorridorParameters(CorridorTypeParameter corridorType, List<String> iso3CountryList) {
