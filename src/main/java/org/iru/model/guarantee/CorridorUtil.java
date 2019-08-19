@@ -12,11 +12,12 @@ public class CorridorUtil {
 		Map<String, List<String>> corridorCustomsUnions = getCorridorCustomsUnions(corridor, customsUnions);
 		List<String> updated = replaceWithCustomsUnions(customsOperationIso3CountryList, corridorCustomsUnions);
 
+		List<String> corridorCountries = corridor.getCountries();
 		switch (corridor.getType()) {
 		case ONE_WAY:
-			return updated.equals(corridor.getCountries());
+			return isIncluded(updated, corridorCountries);
 		case TWO_WAY:
-			return updated.equals(corridor.getCountries()) || reverse(updated).equals(corridor.getCountries());
+			return isIncluded(updated, corridorCountries) || isIncluded(reverse(updated), corridorCountries);
 		}
 		
 		return false;
@@ -59,6 +60,10 @@ public class CorridorUtil {
 		}
 		
 		return output;
+	}
+
+	private boolean isIncluded(List<String> included, List<String> includer) {
+		return Collections.indexOfSubList(includer, included) > -1;
 	}
 
 	

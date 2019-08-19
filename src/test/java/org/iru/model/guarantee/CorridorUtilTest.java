@@ -44,5 +44,18 @@ public class CorridorUtilTest {
 		 Assert.assertFalse(util.validateCustomsOperations(Arrays.asList("IRN", "AZE"), cp, customsUnions));
 	}
 	
+	@Test
+	public void testIRAZGECorridor() {
+		 String value = "http://www.iru.org/model/guarantee-1/corridor?type=one-way&countries=IRN,AZE,GEO";
+		 CorridorParameters cp = new UsageRuleValueUtil().toCorridorParameters(value);
+
+		 Map<String, List<String>> customsUnions = Collections.emptyMap();
+		 
+		 Assert.assertTrue(util.validateCustomsOperations(Arrays.asList("IRN", "AZE", "GEO"), cp, customsUnions));
+		 Assert.assertTrue(util.validateCustomsOperations(Arrays.asList("IRN", "AZE"), cp, customsUnions));
+		 Assert.assertFalse(util.validateCustomsOperations(Arrays.asList("AZE", "IRN"), cp, customsUnions));
+		 Assert.assertTrue(util.validateCustomsOperations(Arrays.asList("AZE", "GEO"), cp, customsUnions));
+	}
+	
 	
 }
