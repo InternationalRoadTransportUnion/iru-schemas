@@ -4,13 +4,17 @@ import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class UsageRuleValueUtil extends AbstractUtil {
 
     private static final String _ADDENDUM = "-addendum";
+    private static final String COUNTRIES = "countries";
     
 	public static final String CORRIDOR_TYPE = "type";
-	public static final String CORRIDOR_COUNTRIES = "countries";
+	public static final String CORRIDOR_COUNTRIES = COUNTRIES;
+	
+	public static final String EPD_TOKEN_WAIVER_COUNTRIES = COUNTRIES;
 
     public String withAnchorValue(String anchorValue, UsageRule usageRule) {
         return withAnchorValue(anchorValue, usageRule.getURI());
@@ -64,6 +68,35 @@ public class UsageRuleValueUtil extends AbstractUtil {
 		p.put(CORRIDOR_TYPE, corridorType.value());
 		p.put(CORRIDOR_COUNTRIES, String.join(",", iso3CountryList));
 		return withQueryParameters(p, UsageRule.CORRIDOR.getURI());
+	}
+	
+	public String withEpdTokenWaiver(Map<String, Integer> iso3CountryCountMap) {
+		Map<String,String> p = new LinkedHashMap<String, String>();
+		
+		p.put(EPD_TOKEN_WAIVER_COUNTRIES, iso3CountryCountMap.entrySet()
+				.stream()
+				.map(me -> me.getValue() == null || me.getValue() <= 0 ? me.getKey() : me.getKey()+":"+me.getValue())
+				.collect(Collectors.joining(",")));
+		
+		return withQueryParameters(p, UsageRule.EPD_TOKEN_WAIVER.getURI());
+	}
+	
+	public Map<String, Integer> toEpdTokenWaiverCountryCountMap(String value) {
+		Map<String,String> qp = queryParameters(value, UsageRule.EPD_TOKEN_WAIVER.getURI());
+		return toEpdTokenWaiverCountryCountMap(qp);
+	}
+	
+	public Map<String, Integer> toEpdTokenWaiverCountryCountMap(Map<String, String> queryParameters) {
+		Map<String, Integer> output = Arrays.stream(queryParameters.get(EPD_TOKEN_WAIVER_COUNTRIES).split(","))
+			.map(c -> c.split(":"))
+			.collect(Collectors.toMap(a -> a[0], a -> a.length > 1 ? Integer.parseInt(a[1]) : 0, (a,b) -> a * b == 0 ? 0 : Math.max(a,b), LinkedHashMap::new));
+		
+		for (Map.Entry<String, Integer> me : output.entrySet()) {
+			if (me.getValue() <= 0) {
+				me.setValue(null);
+			}
+		}
+		return output;
 	}
 	
 }

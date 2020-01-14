@@ -44,6 +44,7 @@
 			<xs:enumeration value="http://www.iru.org/model/association/deed-of-engagement#tobacco-addendum"/>
 			<xs:enumeration value="http://www.iru.org/model/association/deed-of-engagement#tobaccoalcohol-addendum"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/corridor?type=&amp;countries="/>
+			<xs:enumeration value="http://www.iru.org/model/guarantee-1/epd-token-waiver?countries="/>
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -106,6 +107,7 @@
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/volet"/>
 			<xs:enumeration value="http://www.iru.org/model/association/deed-of-engagement"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/corridor"/>
+			<xs:enumeration value="http://www.iru.org/model/guarantee-1/epd-token-waiver"/>
 			<!-- end of individual rules -->
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/format"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/validity-period"/>
