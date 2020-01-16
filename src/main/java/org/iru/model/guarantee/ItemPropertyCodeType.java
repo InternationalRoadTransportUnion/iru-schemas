@@ -10,6 +10,7 @@ public enum ItemPropertyCodeType {
 	USAGE_RULE_VOLET_COUNT(UsageRule.VOLET_COUNT),
 	USAGE_RULE_DEED_OF_ENGAGEMENT(UsageRule.DEED_OF_ENGAGEMENT),
 	USAGE_RULE_CORRIDOR(UsageRule.CORRIDOR),
+	USAGE_RULE_EPD_TOKEN_WAIVER(UsageRule.EPD_TOKEN_WAIVER),
 	FORMAT("http://www.iru.org/model/guarantee-1/format"),
 	VALIDITY_PERIOD("http://www.iru.org/model/guarantee-1/validity-period"),
 	MONETARY_LIMIT("http://www.iru.org/model/guarantee-1/monetary-limit");
