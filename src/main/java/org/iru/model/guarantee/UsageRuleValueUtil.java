@@ -71,14 +71,14 @@ public class UsageRuleValueUtil extends AbstractUtil {
 	}
 	
 	public String withCorridorParameters(CorridorTypeParameter corridorType, List<String> iso3CountryList) {
-		Map<String,String> p = new LinkedHashMap<String, String>();
+		Map<String,String> p = new LinkedHashMap<>();
 		p.put(CORRIDOR_TYPE, corridorType.value());
 		p.put(CORRIDOR_COUNTRIES, String.join(",", iso3CountryList));
 		return withQueryParameters(p, UsageRule.CORRIDOR.getURI());
 	}
 
 	public String withEpdTokenWaiver(Map<String, Integer> iso3CountryCountMap) {
-		Map<String,String> p = new LinkedHashMap<String, String>();
+		Map<String,String> p = new LinkedHashMap<>();
 		
 		p.put(EPD_TOKEN_WAIVER_COUNTRIES, iso3CountryCountMap.entrySet()
 				.stream()

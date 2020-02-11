@@ -35,8 +35,8 @@ public class CountryEnumsTest {
 
     static {
         String[] countries = Locale.getISOCountries();
-        alpha3ToAlpha2 = new HashMap<String, Locale>(countries.length);
-        alpha2ToAlpha3 = new HashMap<String, String>(countries.length);
+        alpha3ToAlpha2 = new HashMap<>(countries.length);
+        alpha2ToAlpha3 = new HashMap<>(countries.length);
         for (String country : countries) {
             Locale locale = new Locale("", country);
             alpha3ToAlpha2.put(locale.getISO3Country().toUpperCase(), locale);
@@ -81,7 +81,7 @@ public class CountryEnumsTest {
 		{
 			List<String> cc2 = new ArrayList<>(contractingCountries);
 			cc2.retainAll(operationalCountries);
-			Assert.assertTrue(cc2.equals(operationalCountries));
+			Assert.assertEquals(cc2, operationalCountries);
 		}
 		{
 			List<String> nonOperationalCountries = new ArrayList<>(contractingCountries);
@@ -115,7 +115,7 @@ public class CountryEnumsTest {
 		{
 			List<String> cc2 = new ArrayList<>(contractingCountries);
 			cc2.retainAll(operationalCountries);
-			Assert.assertTrue(cc2.equals(operationalCountries));
+			Assert.assertEquals(cc2, operationalCountries);
 		}
 		{
 			List<String> nonOperationalCountries = new ArrayList<>(contractingCountries);

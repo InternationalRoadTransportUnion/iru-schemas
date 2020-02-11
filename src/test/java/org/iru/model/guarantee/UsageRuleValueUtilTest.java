@@ -28,13 +28,13 @@ public class UsageRuleValueUtilTest {
 		 Map<String, Integer> counts = util.toEpdTokenWaiverCountryCountMap(value);
 		 
 		 Assert.assertEquals(1, counts.size());
-		 Assert.assertTrue(counts.keySet().contains("BLR"));
+		 Assert.assertTrue(counts.containsKey("BLR"));
 		 Assert.assertNull(counts.values().iterator().next());
 		 
 		 String countsProp = util.withEpdTokenWaiver(counts);
 		 Assert.assertEquals(value, countsProp);
 	}
-	
+
 	@Test
 	public void testBYElectronicArticle49() {
 		String value = "http://www.unece.org/tir/tirconv/conv75.html#article49?format=electronic&countries=ARE";

@@ -82,12 +82,10 @@ public class ItemPropertyValueUtil extends AbstractUtil {
 	}
 
 	public String withMonetaryLimitParameters(String currency, int amount) {
-		Map<String,String> p = new LinkedHashMap<String, String>();
+		Map<String,String> p = new LinkedHashMap<>();
 		p.put(MONETARY_LIMIT_VALUE, Integer.toString(amount));
 		p.put(MONETARY_LIMIT_CURRENCY, currency);
 		return withQueryParameters(p, ItemPropertyCodeType.MONETARY_LIMIT);
 	}
-	
-	
 	
 }
