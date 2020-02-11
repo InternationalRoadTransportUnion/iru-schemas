@@ -45,6 +45,8 @@
 			<xs:enumeration value="http://www.iru.org/model/association/deed-of-engagement#tobaccoalcohol-addendum"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/corridor?type=&amp;countries="/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/epd-token-waiver?countries="/>
+			<xs:enumeration value="http://www.unece.org/tir/tirconv/conv75.html#article49?format=&amp;countries="/>
+			<xs:enumeration value="http://www.iru.org/model/guarantee-1/etir-messages?send="/>
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -108,6 +110,8 @@
 			<xs:enumeration value="http://www.iru.org/model/association/deed-of-engagement"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/corridor"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/epd-token-waiver"/>
+			<xs:enumeration value="http://www.iru.org/model/guarantee-1/etir-messages"/>
+			<xs:enumeration value="http://www.unece.org/tir/tirconv/conv75.html#article49"/>
 			<!-- end of individual rules -->
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/format"/>
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/validity-period"/>

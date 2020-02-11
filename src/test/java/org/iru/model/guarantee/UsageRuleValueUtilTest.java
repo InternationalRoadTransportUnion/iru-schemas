@@ -6,7 +6,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class UsageRuleValueUtilTest {
-	
 	public UsageRuleValueUtil util = new UsageRuleValueUtil();
 
 	@Test
@@ -36,4 +35,27 @@ public class UsageRuleValueUtilTest {
 		 Assert.assertEquals(value, countsProp);
 	}
 	
+	@Test
+	public void testBYElectronicArticle49() {
+		String value = "http://www.unece.org/tir/tirconv/conv75.html#article49?format=electronic&countries=ARE";
+		Article49Parameters parameters = util.toArticle49Parameters(value);
+
+		Assert.assertEquals(FormatTypeAnchor.ELECTRONIC, parameters.getFormat());
+		Assert.assertTrue(parameters.getCountries().contains("ARE"));
+
+		Assert.assertEquals(value, util.withArticle49(parameters));
+	}
+
+	@Test
+	public void testBYElectronicMessages() {
+		String value = "http://www.iru.org/model/guarantee-1/etir-messages?send=false";
+		boolean send = util.sendElectronicMessages(value);
+		Assert.assertFalse(send);
+		Assert.assertEquals(value, util.withElectronicMessages(send));
+
+		value = "http://www.iru.org/model/guarantee-1/etir-messages?send=true";
+		send = util.sendElectronicMessages(value);
+		Assert.assertTrue(send);
+		Assert.assertEquals(value, util.withElectronicMessages(send));
+	}
 }

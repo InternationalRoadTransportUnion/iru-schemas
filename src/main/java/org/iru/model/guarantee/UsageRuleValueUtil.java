@@ -10,11 +10,18 @@ public class UsageRuleValueUtil extends AbstractUtil {
 
     private static final String _ADDENDUM = "-addendum";
     private static final String COUNTRIES = "countries";
-    
+	private static final String FORMAT = "format";
+	private static final String SEND = "send";
+
 	public static final String CORRIDOR_TYPE = "type";
 	public static final String CORRIDOR_COUNTRIES = COUNTRIES;
 	
 	public static final String EPD_TOKEN_WAIVER_COUNTRIES = COUNTRIES;
+
+	public static final String ARTICLE49_COUNTRIES = COUNTRIES;
+	public static final String ARTICLE49_FORMAT = FORMAT;
+
+	public static final String ETIR_MESSAGES_SEND = SEND;
 
     public String withAnchorValue(String anchorValue, UsageRule usageRule) {
         return withAnchorValue(anchorValue, usageRule.getURI());
@@ -69,7 +76,7 @@ public class UsageRuleValueUtil extends AbstractUtil {
 		p.put(CORRIDOR_COUNTRIES, String.join(",", iso3CountryList));
 		return withQueryParameters(p, UsageRule.CORRIDOR.getURI());
 	}
-	
+
 	public String withEpdTokenWaiver(Map<String, Integer> iso3CountryCountMap) {
 		Map<String,String> p = new LinkedHashMap<String, String>();
 		
@@ -98,5 +105,41 @@ public class UsageRuleValueUtil extends AbstractUtil {
 		}
 		return output;
 	}
-	
+
+	public Article49Parameters toArticle49Parameters(String value) {
+		Map<String, String> qp = queryParameters(value, UsageRule.ARTICLE_49.getURI());
+		return toArticle49Parameters(qp);
+	}
+
+	public Article49Parameters toArticle49Parameters(Map<String, String> queryParameters) {
+		FormatTypeAnchor formatTypeAnchor = FormatTypeAnchor.fromValue(queryParameters.get(ARTICLE49_FORMAT));
+		List<String> countries = Arrays.asList(queryParameters.get(ARTICLE49_COUNTRIES).split(","));
+		return Article49Parameters.newBuilder().withFormat(formatTypeAnchor).withCountries(countries).build();
+	}
+
+	public String withArticle49(Article49Parameters article49Parameters) {
+    	return withArticle49(article49Parameters.getFormat(), article49Parameters.getCountries());
+	}
+
+	public String withArticle49(FormatTypeAnchor format, List<String> iso3CountryList) {
+		Map<String,String> p = new LinkedHashMap<>();
+		if (format != null) {
+			p.put(ARTICLE49_FORMAT, format.value());
+		}
+		if (iso3CountryList != null && !iso3CountryList.isEmpty()) {
+			p.put(ARTICLE49_COUNTRIES, String.join(",", iso3CountryList));
+		}
+		return withQueryParameters(p, UsageRule.ARTICLE_49.getURI());
+	}
+
+	public Boolean sendElectronicMessages(String value) {
+		Map<String, String> queryParameters = queryParameters(value, UsageRule.ETIR_MESSAGES.getURI());
+		return queryParameters.get(ETIR_MESSAGES_SEND) == null ? null : Boolean.parseBoolean(queryParameters.get(ETIR_MESSAGES_SEND));
+	}
+
+	public String withElectronicMessages(boolean send) {
+		Map<String,String> p = new LinkedHashMap<>();
+		p.put(SEND, Boolean.toString(send));
+		return withQueryParameters(p, UsageRule.ETIR_MESSAGES.getURI());
+	}
 }

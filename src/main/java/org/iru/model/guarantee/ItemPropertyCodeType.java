@@ -11,6 +11,8 @@ public enum ItemPropertyCodeType {
 	USAGE_RULE_DEED_OF_ENGAGEMENT(UsageRule.DEED_OF_ENGAGEMENT),
 	USAGE_RULE_CORRIDOR(UsageRule.CORRIDOR),
 	USAGE_RULE_EPD_TOKEN_WAIVER(UsageRule.EPD_TOKEN_WAIVER),
+	USAGE_RULE_ARTICLE_49(UsageRule.ARTICLE_49),
+	USAGE_RULE_ETIR_MESSAGES(UsageRule.ETIR_MESSAGES),
 	FORMAT("http://www.iru.org/model/guarantee-1/format"),
 	VALIDITY_PERIOD("http://www.iru.org/model/guarantee-1/validity-period"),
 	MONETARY_LIMIT("http://www.iru.org/model/guarantee-1/monetary-limit");
