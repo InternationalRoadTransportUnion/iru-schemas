@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.iru.common</groupId>
 	<artifactId>iru-schemas</artifactId>
-	<version>1.26</version>
+	<version>1.27-SNAPSHOT</version>
 
 	<name>iru-schemas</name>
 	<description>Base schemas and utilities</description>
