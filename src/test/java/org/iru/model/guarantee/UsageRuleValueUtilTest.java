@@ -37,7 +37,7 @@ public class UsageRuleValueUtilTest {
 
 	@Test
 	public void testBYElectronicArticle49() {
-		String value = "http://www.unece.org/tir/tirconv/conv75.html#article49?format=electronic&countries=ARE";
+		String value = "http://www.unece.org/tir/tirconv/conv75/article49.html?format=electronic&countries=ARE";
 		Article49Parameters parameters = util.toArticle49Parameters(value);
 
 		Assert.assertEquals(FormatTypeAnchor.ELECTRONIC, parameters.getFormat());
