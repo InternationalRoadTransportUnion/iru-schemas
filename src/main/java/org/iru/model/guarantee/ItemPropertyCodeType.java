@@ -4,7 +4,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 public enum ItemPropertyCodeType {
-
+	// Do not use any fragment or query here as they are not yet fully supported by pegase
 	LEGAL_FRAMEWORK("http://www.iru.org/model/guarantee-1/legal-framework"),
 	USAGE_RULESET("http://www.iru.org/model/guarantee-1/usage-rule-set"),
 	USAGE_RULE_VOLET_COUNT(UsageRule.VOLET_COUNT),

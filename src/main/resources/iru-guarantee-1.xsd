@@ -100,7 +100,8 @@
 	<xs:simpleType name="ItemPropertyCodeType">
 		<xs:restriction base="xs:anyURI"/>
 	</xs:simpleType>
-	
+
+	<!-- Do not use any fragment or query here as they are not yet fully supported by pegase -->
 	<xs:simpleType name="ItemPropertyCodeTypeType">
 		<xs:restriction base="ItemPropertyCodeType">
 			<xs:enumeration value="http://www.iru.org/model/guarantee-1/legal-framework"/>
