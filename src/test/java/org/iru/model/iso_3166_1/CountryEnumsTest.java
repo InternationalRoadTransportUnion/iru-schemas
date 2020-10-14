@@ -22,10 +22,8 @@ public class CountryEnumsTest {
 			"Chile",
 			"Indonesia",
 			"Liberia",
-			"Oman",
 			"Palestine",
 			"South Korea",
-			"Saudi Arabia",
 			"United States",
 			"Uruguay"
 	};

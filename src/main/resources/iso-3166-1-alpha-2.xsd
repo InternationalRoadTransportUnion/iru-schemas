@@ -134,12 +134,14 @@
 			<xs:enumeration value="MA" />
 			<xs:enumeration value="NL" />
 			<xs:enumeration value="NO" />
+			<xs:enumeration value="OM" />
 			<xs:enumeration value="PK" />
 			<xs:enumeration value="PL" />
 			<xs:enumeration value="PT" />
 			<xs:enumeration value="QA" />
 			<xs:enumeration value="RO" />
 			<xs:enumeration value="RU" />
+			<xs:enumeration value="SA" />
 			<xs:enumeration value="RS" />
 			<xs:enumeration value="SK" />
 			<xs:enumeration value="SI" />

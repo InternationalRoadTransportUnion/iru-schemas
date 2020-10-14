@@ -134,12 +134,14 @@
 			<xs:enumeration value="MAR" />
 			<xs:enumeration value="NLD" />
 			<xs:enumeration value="NOR" />
+			<xs:enumeration value="OMN" />
 			<xs:enumeration value="PAK" />
 			<xs:enumeration value="POL" />
 			<xs:enumeration value="PRT" />
 			<xs:enumeration value="QAT" />
 			<xs:enumeration value="ROU" />
 			<xs:enumeration value="RUS" />
+			<xs:enumeration value="SAU" />
 			<xs:enumeration value="SRB" />
 			<xs:enumeration value="SVK" />
 			<xs:enumeration value="SVN" />
