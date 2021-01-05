@@ -17,6 +17,7 @@
 			<xs:enumeration value="AF" />
 			<xs:enumeration value="AL" />
 			<xs:enumeration value="DZ" />
+			<xs:enumeration value="AR" />
 			<xs:enumeration value="AM" />
 			<xs:enumeration value="AT" />
 			<xs:enumeration value="AZ" />
@@ -31,6 +32,7 @@
 			<xs:enumeration value="CY" />
 			<xs:enumeration value="CZ" />
 			<xs:enumeration value="DK" />
+			<xs:enumeration value="EG" />
 			<xs:enumeration value="EE" />
 			<xs:enumeration value="FI" />
 			<xs:enumeration value="FR" />

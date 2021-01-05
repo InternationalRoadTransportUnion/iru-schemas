@@ -17,6 +17,7 @@
 			<xs:enumeration value="AFG" />
 			<xs:enumeration value="ALB" />
 			<xs:enumeration value="DZA" />
+			<xs:enumeration value="ARG" />
 			<xs:enumeration value="ARM" />
 			<xs:enumeration value="AUT" />
 			<xs:enumeration value="AZE" />
@@ -31,6 +32,7 @@
 			<xs:enumeration value="CYP" />
 			<xs:enumeration value="CZE" />
 			<xs:enumeration value="DNK" />
+			<xs:enumeration value="EGY" />
 			<xs:enumeration value="EST" />
 			<xs:enumeration value="FIN" />
 			<xs:enumeration value="FRA" />
